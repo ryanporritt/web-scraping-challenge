@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mission to Mars</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="jumbotron text-center">
+      <h1>Mission to Mars</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+    </div>
+    <h2>Latest Mars News:</h2>
+    <h3>{{ mars.news_title }}</h3>
+    <p>{{ mars.news_paragraph }}</p>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h2>Featured Mars Image:</h2>
+                <img src="{{ mars.featured_img }}" alt="mars_featured_image" width="481" height="481">>
+            </div>
+
+            <div class="col-md-4">
+                <h2>Current Weather on mars:</h2>
+                <p>{{ mars.weather }}</p>
+                <!-- SAME Column -->
+                <h2>Mars Facts:</h2>
+                <table class="table-striped">
+                    <!-- DONT DELETE for page:9-->
+                    <script src="../static/append_list.js"></script>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Mars Hemispheres:</h2>
+            </div>
+
+            <div class="col-md-4">
+            </div>
+
+            <div class="col-md-4">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="{{ mars.first_hemisphere_img }}" alt="Cerberus_Hemisphere" width="481" height="481">>
+                    <h4>{{ mars.first_hemisphere_title }}</h4>
+                </div>
+    
+                <div class="col-md-6">
+                    <img src="{{ mars.second_hemisphere_img }}" alt="Schiaparelli_Hemisphere" width="481" height="481">>
+                    <h4>{{ mars.second_hemisphere_title }}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="{{ mars.third_hemisphere_img }}" alt="Syrtis_Major_Hemisphere" width="481" height="481">>
+                    <h4>{{ mars.third_hemisphere_title }}</h4>
+                </div>
+    
+                <div class="col-md-6">
+                    <img src="{{ mars.fourth_hemisphere_img }}" alt="Valles_Marineris_Hemisphere" width="481" height="481">>
+                    <h4>{{ mars.fourth_hemisphere_title }}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  </div>
+</body>
+
+</html>
